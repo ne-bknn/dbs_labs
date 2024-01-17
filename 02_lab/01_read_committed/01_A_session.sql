@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS test_table;
+DROP TABLE IF EXISTS test_table IF EXISTS;
 CREATE TABLE test_table (id SERIAL PRIMARY KEY, test_column TEXT);
 insert into test_table(test_column) values('initial');
 begin transaction isolation level read committed;
